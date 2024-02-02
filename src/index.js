@@ -1,6 +1,9 @@
-// import { initializeCounter } from './counter.js';
+import favicon from './images/favicon-16x16.png';
 
-console.log('Hello, world!');
+const img = new Image(16, 16);
+img.src = favicon;
+
+document.querySelector('#content').appendChild(img);
 
 import('./counter.js').then(({ initializeCounter }) => {
   initializeCounter();
