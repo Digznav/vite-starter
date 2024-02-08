@@ -10,7 +10,7 @@ export const initializeCounter = (doc = globalThis.document) => {
   let count = 0;
 
   const render = () => {
-    countElement.textContent = count;
+    countElement.textContent = String(count);
 
     if (count < 0) {
       import('./banner.js').then(({ addBanner }) => {
